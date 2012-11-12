@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 	<PreferenceCategory 
+		android:key="@string/pref_category_datetime_key" 
+		android:title="@string/pref_category_datetime_title"> 
+			
+			<EditTextPreference
+			android:key="@string/pref_default_time_from_now_key" 
+			android:dialogTitle="@string/pref_default_time_from_now_dialog_title" 
+			android:dialogMessage="@string/pref_default_time_from_now_message"
+			android:summary="@string/pref_default_time_from_now_summary"
+			android:title="@string/pref_default_time_from_now_title" /> 		
+	</PreferenceCategory>
+ -->
+ 
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+    <PreferenceCategory 
+	    	    
+		android:key = "@string/interfacestr"
+		android:title ="@string/user_interface_features" >
+		
+        <CheckBoxPreference
+		    android:title ="@string/Pref_Beep"   
+			android:key = "@string/beep_on"
+		    android:summary ="@string/beep_speaker_when_aligned" /> 
+	
+          <CheckBoxPreference
+		    android:title ="@string/vibrate_when_aligned"   
+			android:key = "@string/vibrate_on"
+		    android:summary ="@string/vibrate_device_when_aligned" /> 
+	    
+        <EditTextPreference	        
+	        android:title="@string/bubble_size"   
+			android:key = "@string/pref_bubble"
+			android:summary = "@string/bubble_size_in_pixels_limited_to_a_range_of_10_100" 
+	    	 />
+	          	
+        <ListPreference 
+		    android:title="Leveler Bubble Color"  			
+			android:key = "@string/bubble_color"
+		 	android:summary="Set Bubble Color" 
+		    android:entries = "@array/Pref_Color_List" 
+		    android:entryValues = "@array/Pref_ColArr"
+		    android:defaultValue = "@string/pref_col_green"
+		    android:dialogTitle="Select Bubble Color"   />
+                
+        
+        <ListPreference 
+		    android:title="Leveler Background"  			
+			android:key = "@string/background"
+		 	android:summary="Set Leveler Background" 
+		    android:entries = "@array/Pref_Bg_List" 
+		    android:entryValues = "@array/Pref_Bg_Arr"
+		    android:defaultValue = "@string/pref_bg_steel"
+		    android:dialogTitle="Select Background"   />
+        
+	</PreferenceCategory> 
+	    
+	<PreferenceCategory 
+	    	    
+		android:key="@string/sensor_orientation" 
+		android:title="@string/sensor_orientation_and_speed" >
+			 
+	   <EditTextPreference	        
+	        android:title="@string/summary_"   
+			android:key = "@string/disabled_pref"
+			android:enabled = "false"
+		    android:summary = "@string/pref_help" 
+	    	 />
+	  
+		<CheckBoxPreference 
+		    android:title="@string/swap_x_y_coordinates"   
+			android:key = "@string/swap_xy"
+		    android:summary="@string/some_devices_need" /> 
+				    
+		<CheckBoxPreference 
+		    android:title="@string/reverse_x_direction"   
+			android:key = "@string/revese_x"
+		    android:summary="@string/some_devices_have_the_sensor_x_orientation_negated" /> 
+		
+		<CheckBoxPreference 
+		    android:title="@string/reverse_y_direction"   
+			android:key = "@string/revese_y"
+		    android:summary="@string/some_devices_have_the_sensor_y_orientation_negated" /> 
+		
+		<ListPreference 
+		    android:title="@string/sensor_speed"  			
+			android:key = "@string/scanning_speed"
+		 	android:summary="@string/set_sensor_scanning_speed_" 
+		    android:entries = "@array/Pref_Speed_List" 
+		    android:entryValues = "@array/Pref_ValArr"
+		    android:defaultValue = "@string/pref_item_2"
+		    android:dialogTitle="@string/select_sensor_scanning_speed"		    />
+				
+	</PreferenceCategory>
+	
+</PreferenceScreen>
